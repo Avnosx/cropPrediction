@@ -28,7 +28,7 @@ app.post('/predict-crop', (req, res) => {
     return;
   }
 
-  const  N=17, P=18, K=28, temperature=23, humidity=34, pH=4.5, rainfall=44.4;
+  const  {N,P,K,temperature,humidity,pH,rainfall}= req.body;
   function preprocessInput(inputData) {
     const minTemperature = 15; // Replace with the minimum temperature in your dataset
     const maxTemperature = 35; // Replace with the maximum temperature in your dataset
